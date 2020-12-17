@@ -2,7 +2,11 @@ require("dotenv").config();
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 const withFonts = require("next-fonts");
 const CompressionPlugin = require("compression-webpack-plugin");
-
+const { nextI18NextRewrites } = require("next-i18next/rewrites");
+const localeSubpaths = {
+  zh: "zh",
+  ko: "ko",
+};
 module.exports = withBundleAnalyzer(
   withFonts({
     //**  빌드 시 번들 사이즈 분석 플러그인**//
@@ -20,6 +24,10 @@ module.exports = withBundleAnalyzer(
       },
     },
     compress: true,
+    rewrites: async () => nextI18NextRewrites(localeSubpaths),
+    publicRuntimeConfig: {
+      localeSubpaths,
+    },
     webpack(config) {
       // console.log(config)
       const prod = process.env.NODE_ENV === "production";

@@ -10,6 +10,7 @@ import GlobalStyles from "~/styles/global-styles";
 import { ThemeProvider } from "~/styles/themed-components";
 import theme from "~/styles/themes";
 import "react-datepicker/dist/react-datepicker.css";
+import { appWithTranslation } from "~/utils/i18n";
 
 interface MyAppProps {
   store: WithSagaTaskStore;
@@ -42,4 +43,4 @@ class MyApp extends App<MyAppProps> {
   }
 }
 
-export default withRedux(createStore)(withReduxSaga(MyApp));
+export default withRedux(createStore)(withReduxSaga(appWithTranslation(MyApp)));
