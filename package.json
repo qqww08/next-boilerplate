@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS=--max-old-space-size=4096 next",
-    "build": "cross-env BUNDLE_ANALYZE=both next build",
+    "build": "next build",
+    "bundle-build": "cross-env BUNDLE_ANALYZE=both next build",
     "start": "next start"
   },
   "dependencies": {
