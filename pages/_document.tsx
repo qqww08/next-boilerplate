@@ -26,15 +26,15 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
-  render(): JSX.Element {
-    return (
-      <Html>
-        <Head></Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+  // render(): JSX.Element {
+  //   return (
+  //     <Html>
+  //       <Head></Head>
+  //       <body>
+  //         <Main />
+  //         <NextScript />
+  //       </body>
+  //     </Html>
+  //   );
+  // }
 }

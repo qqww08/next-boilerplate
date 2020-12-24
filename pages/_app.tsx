@@ -5,11 +5,9 @@ import withRedux from "next-redux-wrapper";
 import withReduxSaga from "next-redux-saga";
 import createStore from "../createStore";
 import { WithSagaTaskStore } from "../interfaces";
-import "../utils/axios";
 import GlobalStyles from "~/styles/global-styles";
 import { ThemeProvider } from "~/styles/themed-components";
 import theme from "~/styles/themes";
-import "react-datepicker/dist/react-datepicker.css";
 import { appWithTranslation } from "~/utils/i18n";
 
 interface MyAppProps {
