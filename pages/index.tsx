@@ -1,14 +1,10 @@
 import { NextPage } from "next";
 import React from "react";
-import { State, wrapper } from "~/createStore";
-import { getAction } from "~/store/action";
-import { connect } from "react-redux";
-
-const Index: NextPage<State> = () => {
-  // const dispatch = useDispatch();
-  // dispatch(getAction());
-
+import { WithReduxNextPageContext } from "~/interfaces";
+const Index: NextPage = () => {
   return <div></div>;
 };
-
-export default connect((state: State) => state)(Index);
+Index.getInitialProps = async ({ store, req }: WithReduxNextPageContext) => {
+  return { namespacesRequired: ["common"] };
+};
+export default Index;

@@ -17,4 +17,4 @@ Feature/scss
 - scss
 
 Feature/i18n
-- scss
+- i18n
