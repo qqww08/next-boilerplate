@@ -1,5 +1,5 @@
-import reset from "styled-reset";
-import { createGlobalStyle, css } from "styled-components";
+import reset from 'styled-reset';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -108,8 +108,8 @@ export const Threeline = css`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 `;
-export const px2rem = (px) => {
+export const px2rem = px => {
   const rem = 72;
-  return px / rem + "rem";
+  return px / rem + 'rem';
 };
 export default GlobalStyle;

@@ -1,15 +1,15 @@
-import reactSizes from "react-sizes";
-import { DeviceSize } from "./themed-components";
+import reactSizes from 'react-sizes';
+import { DeviceSize } from './themed-components';
 
 const withSizes = (component: { width: number }): { device: DeviceSize } => {
   const { width } = component;
-  let device: DeviceSize = "desktop";
+  let device: DeviceSize = 'desktop';
   if (!width) {
-    device = "ssr";
+    device = 'ssr';
   } else if (width <= 576) {
-    device = "phone";
+    device = 'phone';
   } else if (width <= 768) {
-    device = "tablet";
+    device = 'tablet';
   }
   return {
     device,

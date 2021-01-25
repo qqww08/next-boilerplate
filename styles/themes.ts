@@ -1,4 +1,4 @@
-import baseStyled, { css, ThemedStyledInterface } from "styled-components";
+import baseStyled, { css, ThemedStyledInterface } from 'styled-components';
 // Iterate through the sizes and create a media template
 const sizes = {
     desktop: 1167,
@@ -21,9 +21,9 @@ Object.keys(sizes).reduce((acc, label: string) => {
 }, media);
 
 const color = {
-  blue: "#2054ae",
-  pink: "#c43683",
-  black: "#24272a",
+  blue: '#2054ae',
+  pink: '#c43683',
+  black: '#24272a',
 };
 
 const themes = {

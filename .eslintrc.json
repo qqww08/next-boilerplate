@@ -21,7 +21,6 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "createDefaultProgram": true,
     "ecmaVersion": 2018,
     "sourceType": "module",
     "project": "tsconfig.json"
