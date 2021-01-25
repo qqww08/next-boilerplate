@@ -2,7 +2,7 @@ require("dotenv").config();
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 const withFonts = require("next-fonts");
 const CompressionPlugin = require("compression-webpack-plugin");
-const { nextI18NextRewrites } = require("next-i18next/rewrites");
+
 const localeSubpaths = {
   zh: "zh",
   ko: "ko",
@@ -24,7 +24,6 @@ module.exports = withBundleAnalyzer(
       },
     },
     compress: true,
-    rewrites: async () => nextI18NextRewrites(localeSubpaths),
     publicRuntimeConfig: {
       localeSubpaths,
     },
